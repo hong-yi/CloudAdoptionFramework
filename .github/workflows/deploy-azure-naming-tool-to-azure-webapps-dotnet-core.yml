@@ -50,7 +50,7 @@ jobs:
             azure-webapp-name: ${{ secrets.AZURE_WEBAPP_NAME }}
             azure-webapp-publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
             azure-credentials: ${{ secrets.AZURE_CREDENTIALS }}
-          if: (env.azure-webapp-name != null && env.azure-webapp-publish-profile != null)
+          if: (env.azure-webapp-name != null && env.azure-webapp-publish-profile != null && env.azure-credentials != null)
           run: echo 'isvalid=true' >> $GITHUB_OUTPUT
             
   build:
